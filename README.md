@@ -48,5 +48,5 @@ In this architecture:
 Before running any of the labs in this section ensure you've run the [Bedrock boto3 setup notebook](../AWS_Bedrock\AWS Bedrock And Langchain\main.py#Prerequisites).
 
 ## Notebooks
-This module provides you with 3 notebooks for the same pattern. You can experience conversation with Anthropic Claude as well as Amazon Titan Text Large to experience each the conversational power of each model.
+This module provides you  notebooks for the same pattern. You can experience conversation with Anthropic Claude as well as Amazon Titan Text Large to experience each the conversational power of model.
 
