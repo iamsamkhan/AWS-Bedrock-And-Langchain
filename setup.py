@@ -1,29 +1,46 @@
 import setuptools
 
-with open("README.md", "r", encoding="utf-8") as f:
-    long_description = f.read()
+# with open("README.md", "r", encoding="utf-8") as f:
+#     long_description = f.read()
+    
+    
+    
+def _get_description():
+    path = pathlib.Path(__file__).parent / 'README.md'
+    with open(path, encoding='utf-8') as f:
+        long_description = f.read()
+    return long_description
 
 
-__version__ = "0.0.0"
-
-REPO_NAME = "AWS-Bedrock-And-Langchain"
-AUTHOR_USER_NAME = "shamshad ahmed"
-SRC_REPO = "AWS_Bedrock"
-AUTHOR_EMAIL = "smshad0001@gmail.com"
+def _get_requirements(path):
+    with open(path) as f:
+        data = f.readlines()
+    return data
 
 
-setuptools.setup(
-    name=AWS_Bedrock,
-    version=__version__,
-    author=AUTHOR_USER_NAME,
-    author_email=AUTHOR_EMAIL,
-    description="End To End Advanced RAG App Using AWS Bedrock And Langchain",
-    long_description=long_description,
-    long_description_content="text/markdown",
-    url=f"https://github.com/iamsamkhan/AWS-Bedrock-And-Langchain.git/{AUTHOR_USER_NAME}/{REPO_NAME}",
-    project_urls={
-        "Bug Tracker": f"https://github.com/iamsamkhan/AWS-Bedrock-And-Langchain.git/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
+setup(
+    name='AWS-Bedrock-And-Langchain',
+    version='0.2.8',
+    author='shamshad ahmed',
+    url='https://github.com/iamsamkhan/AWS-Bedrock-And-Langchain.git',
+    python_requires='>=3.10',
+    install_requires=_get_requirements('requirements.txt'),
+    packages=find_packages(exclude=('tests', )),
+    include_package_data=True,
+    entry_points={
+        'AWS_Bedrock': [
+            'AWS_Bedrock=main',
+        ],
     },
-    package_dir={"": "AWS_Bedrock"},
+    description='End To End Advanced RAG App Using AWS Bedrock And Langchain',
+    long_description=__get_long_description(),
+    long_description_content_type='text/markdown',
+    url=f"https://github.com/iamsamkhan/AWS-Bedrock-And-Langchain.git/{author}/{name}",
+    url=f"https://github.com/iamsamkhan/AWS-Bedrock-And-Langchain.git/{author}/{name}",
+    project_urls={
+         "Bug Tracker": f"https://github.com/iamsamkhan/AWS-Bedrock-And-Langchain.git/{author}/{name}/issues",
+     },
+     package_dir={"": "AWS_Bedrock"},
     packages=setuptools.find_packages(where="AWS_Bedrock")
+
 )
