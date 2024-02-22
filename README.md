@@ -1,6 +1,6 @@
 ## AWS-Bedrock-And-Langchain
 
-# Lab 4 - Conversational Interfaces (Chatbots)
+## Lab 4 - Conversational Interfaces (Chatbots)
 
 ## Overview
 
