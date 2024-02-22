@@ -9,7 +9,7 @@ Conversational interfaces such as chatbots and virtual assistants can be used to
 
 ## Chatbot using Amazon Bedrock
 
-![Amazon Bedrock - Conversational Interface](./imgs\10-overview.png)
+ [Amazon Bedrock - Conversational Interface](./imgs\10-overview.png)
 
 ## Use Cases
 
